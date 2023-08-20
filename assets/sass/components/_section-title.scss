@@ -1,0 +1,71 @@
+/****************************
+	section-title
+*****************************/
+.section-title {
+	text-align: center;
+	margin-bottom: 50px;
+
+	h2 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		line-height: 1.2em;
+		color: $white;
+		margin: 0 0 1em;
+		padding: 0 90px;
+
+		@include media-query(1199px) {
+			padding: 0 40px;
+		}
+
+		@include media-query(991px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+			padding: 0 40px;
+		}
+
+		@include media-query(767px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+			padding: 0;
+		}
+	}
+
+	p {
+		color: #a1adbd;
+		margin: 0;
+	}
+}
+
+.section-title-s2 {
+	h2 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		line-height: 1.2em;
+		color: $theme-primary-color;
+		margin: 0 0 0.8em;
+		
+		@include media-query(991px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+
+		@include media-query(767px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+	}
+}
+
+.section-title-s3 {
+	@extend .section-title-s2;
+	color: $white;
+}
+
+.section-title-s4 {
+	@extend .section-title;
+
+	h2 {
+		color: $theme-primary-color;
+		margin: 0 0 0.7em;
+	}
+}

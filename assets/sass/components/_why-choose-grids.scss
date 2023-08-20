@@ -1,0 +1,122 @@
+/*********************************
+	why choose grids
+*********************************/
+.why-choose-grids {
+	.grid {
+		position: relative;
+		overflow: hidden;
+
+		@include widther(992px) {
+			height: 400px;
+		}
+	}
+
+	.img-holder {
+		position: relative;
+
+		&:before {
+			@include widther(992px) {
+				content: "";
+				@include overlay(transparentize($theme-primary-color, 0.4));
+				top: auto;
+				bottom: 20px;
+				z-index: 10;
+				opacity: 0;
+				@include transition-time(0.3s);
+			}
+		}
+	}
+
+	.grid:hover .img-holder:before {
+		opacity: 1;
+	}
+
+	.grid .details {
+		background-color: $white;
+		padding: 45px 45px 50px;
+		box-shadow: 0 3px 13px transparentize($black, 0.93);
+		text-align: center;
+		position: relative;
+		z-index: 20;
+		@include transition-time(0.5s);
+
+		@include widther(992px) {
+			height: 185px;
+			position: absolute;
+			top: 225px;
+		}
+
+		@include media-query(991px) {
+			padding: 45px 25px 35px;
+		}
+	}
+
+	.grid:hover .details {
+		@include widther(992px) {
+			height: 230px;
+			top: 170px;
+		}
+	}
+
+	.grid .icon {
+		background-color: $white;
+		width: 75px;
+		height: 75px;
+		line-height: 75px;
+		box-shadow: 0 0 10px transparentize(#ababab, 0.45);
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		top: -37.5px;
+		@include translatingX();
+
+		@include media-query(767px) {
+			width: 65px;
+			height: 65px;
+			line-height: 65px;
+			top: -32.5px;
+		}
+
+		.fi:before {
+			font-size: 45px;
+			color: $theme-primary-color;
+
+			@include media-query(767px) {
+				font-size: 35px;
+			}
+		}
+	}
+
+	.grid .details h3 {
+		font-size: 22px;
+		font-size: calc-rem-value(22);
+		color: $theme-primary-color;
+		margin: 0.42em 0 0.68em;
+
+		@include media-query(991px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+	}
+
+	.grid .details .read-more {
+		font-family: $heading-font;
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		font-weight: 600;
+		color: $theme-primary-color;
+
+		@include media-query(991px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.grid .details p {
+		margin-bottom: 1.7em;
+
+		@include media-query(991px) {
+			margin-bottom: 1em;
+		}
+	}
+}

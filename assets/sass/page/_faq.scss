@@ -1,0 +1,32 @@
+/*--------------------------------------------------------------
+#	faq page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#9.1	faq-section
+--------------------------------------------------------------*/
+.faq-section {
+	.container {
+		@include widther(1200px) {
+			padding: 0 100px;
+		}
+	}
+
+	h2 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		line-height: 1.3em;
+		font-weight: 500;
+		color: $theme-primary-color;
+		margin: 0 0 1em;
+
+		@include media-query(991px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+
+		@include media-query(767px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+	}
+}

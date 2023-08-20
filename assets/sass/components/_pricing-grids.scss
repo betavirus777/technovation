@@ -1,0 +1,149 @@
+/*******************************
+	pricing grids
+********************************/
+.pricing-grids {
+	.grid {
+		background-color: $white;
+	}
+
+	.pricing-header {
+		@include background-style("../images/pricing/img-1.jpg", center center, cover, no-repeat, local);
+		padding: 50px 65px;
+		text-align: center;
+		position: relative;
+
+		@include media-query(767px) {
+			padding: 40px 55px;
+		}
+		
+		&:before {
+			content: "";
+			@include overlay(transparentize($theme-primary-color, 0.2));
+		}
+	}
+
+	.price {
+		font-size: 48px;
+		font-size: calc-rem-value(48);
+		font-weight: 600;
+		color: $white;
+		padding-left: 15px;
+		margin: 0;
+		display: inline-block;
+		position: relative;
+
+		@include media-query(767px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+
+		span {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+			color: #4fba6f;
+			position: absolute;
+			top: 8px;
+			left: 0;
+
+			@include media-query(767px) {
+				font-size: 20px;
+				font-size: calc-rem-value(20);
+				top: 3px;
+			}
+		}
+	}
+
+	.duration {
+		font-family: $heading-font;
+		font-weight: 600;
+		color: $white;
+		margin: 0;
+		position: relative;
+	}
+
+	.type {
+		font-family: $heading-font;
+		background: $theme-primary-color;
+		@include linear-gradient-bg(top, darken($theme-primary-color, 5%), $theme-primary-color);
+		width: 160px;
+		height: 45px;
+		line-height: 45px;
+		font-weight: 600;
+		color: $white;
+		position: absolute;
+		left: 50%;
+		bottom: -22.5px;
+		@include translatingX();
+
+		@include media-query(767px) {
+			width: 120px;
+			height: 40px;
+			line-height: 40px;
+			bottom: -20px;
+		}
+	}
+
+	.popular-ribbon {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		img {
+			width: auto;
+		}
+	}
+
+	.pricing-body {
+		text-align: center;
+		padding: 50px 0;
+
+		@include media-query(767px) {
+			padding: 50px 0 40px;
+		}
+
+		ul {
+			list-style: none;
+			margin-bottom: 40px;
+		}
+
+		ul li {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			color: #7a8595;
+		}
+
+		ul li {
+			border-bottom: 1px solid #e3eff5;
+			padding: 15px 0;
+
+			@include media-query(767px) {
+				padding: 10px 0;
+			}
+		}
+
+		ul > li:first-child {
+			border-top: 1px solid #e3eff5;
+		}
+
+		.sign-up {
+			background-color: #e3eff5;
+			width: 160px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			color: $theme-primary-color;
+			font-weight: 500px;
+			text-transform: uppercase;
+			display: inline-block;
+
+			@include media-query(767px) {
+				width: 110px;
+				height: 38px;
+				line-height: 38px;
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+	}
+}

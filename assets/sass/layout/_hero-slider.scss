@@ -1,0 +1,343 @@
+/*--------------------------------------------------------------
+#0.4	hero slider
+--------------------------------------------------------------*/
+.hero {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+
+	@include media-query(767px) {
+		min-height: 420px;
+	}
+
+	.slide {
+		height: 100vh;
+		position: relative;
+
+		@include media-query(767px) {
+			min-height: 420px;
+		}
+
+		background-repeat: no-repeat;
+		position: relative;
+
+		.slider-bg {
+			display: none;
+		}
+	}
+
+	.slide:focus {
+		outline: none;
+	}
+
+	.slide .container {
+		height: 100%;
+		display: table;
+	}
+
+	.slide .row {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+
+	/** slider controls **/
+	.slick-prev,
+	.slick-next {
+		background-color: transparent;
+		width:45px;
+		height: 45px;
+		z-index: 10;
+
+		@include media-query(991px) {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	.slick-prev {
+		left: 25px;
+
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f104";
+			font-size: 30px;
+			color: $theme-primary-color;
+			opacity: 1;
+		}
+	}
+
+	.slick-next {
+		right: 25px;
+
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f105";
+			font-size: 30px;
+			color: $theme-primary-color;
+			opacity: 1;
+		}
+	}
+
+
+	.slick-dots {
+		bottom: 20px;
+
+		@include widther(992px) {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	.slick-dots li {
+		margin: 0;
+	}
+
+	.slick-dots li button {
+		background-color: $white;
+		width: 12px;
+		height: 12px;
+		margin: 0;
+		border-radius: 50%;
+	}
+
+	.slick-dots li.slick-active button {
+		background-color: $theme-primary-color;
+	}
+
+	.slick-dots li button:before {
+		display: none;
+	}
+
+	.slide-caption > h2 {
+		font-size: 48px;
+		font-size: calc-rem-value(48);
+		color: $theme-primary-color;
+		margin: 0 0 0.4em;
+
+		@include media-query(991px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+
+		@include media-query(767px) {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+		}
+	}
+
+	.slide-caption {
+		@include media-query(767px) {
+			padding: 0 5px;
+		}
+	}
+
+	.slide-caption > p {
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		color: $white;
+		margin: 0 0 2.5em;
+
+		@include media-query(991px) {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+		}
+	}
+
+
+	/*** hero slider animation ***/
+	.hero-slider .slide-caption > h2,
+	.hero-slider .slide-caption > p,
+	.hero-slider .slide-caption > .btns {
+		opacity: 0;
+	}
+
+	.hero-slider .slick-list .slick-current .slide-caption > h2 {
+		-webkit-animation: fadeInLeftSlow 1.5s 0.8s forwards;
+		-moz-animation: fadeInLeftSlow 1.5s 0.8s forwards;
+		-o-animation: fadeInLeftSlow 1.5s 0.8s forwards;
+		-ms-animation: fadeInLeftSlow 1.5s 0.8s forwards;
+		animation: fadeInLeftSlow 1.5s 0.8s forwards;
+	}
+
+	.hero-slider .slick-list .slick-current .slide-caption > p {
+		-webkit-animation: fadeInLeftSlow 1.5s 1.4s forwards;
+		-moz-animation: fadeInLeftSlow 1.5s 1.4s forwards;
+		-o-animation: fadeInLeftSlow 1.5s 1.4s forwards;
+		-ms-animation: fadeInLeftSlow 1.5s 1.4s forwards;
+		animation: fadeInLeftSlow 1.5s 1.4s forwards;
+	}
+
+	.hero-slider .slick-list .slick-current .slide-caption > .btns {
+		-webkit-animation: fadeInLeftSlow 1.5s 1.8s forwards;
+		-moz-animation: fadeInLeftSlow 1.5s 1.8s forwards;
+		-o-animation: fadeInLeftSlow 1.5s 1.8s forwards;
+		-ms-animation: fadeInLeftSlow 1.5s 1.8s forwards;
+		animation: fadeInLeftSlow 1.5s 1.8s forwards;
+	}
+}
+
+
+/*******************************
+	hero style 1
+********************************/
+.hero-slider-style-1 {
+	height: 590px;
+
+	@include media-query(767px) {
+		height: 430px;
+	}
+
+	.slide {
+		height: 590px;
+		position: relative;
+
+		@include media-query(767px) {
+			height: 430px;
+			position: relative;
+
+			&:before {
+				content: "";
+				@include overlay(transparentize($white, 0.5));
+			}
+
+			p {
+				color: $theme-primary-color;
+			}
+		}
+	}
+}
+
+
+/*******************************
+	hero style 2
+********************************/
+.hero-slider-style-2 {
+	height: 715px;
+
+	@include widther(992px) {
+		position: relative;
+		top: -75px;
+		.slide-caption {
+			margin-top: 75px;
+		}
+	}
+
+	@include media-query(767px) {
+		height: 480px;
+	}
+
+	.slide {
+		height: 715px;
+		position: relative;
+
+		@include media-query(767px) {
+			height: 480px;
+		}
+	}
+
+	.slide-caption > h2 {
+		color: $white;
+		line-height: 1.25em;
+		margin: 0 0 0.73em;
+	}
+
+	.slide-caption > p {
+		color: $white;
+		margin: 0 0 2.5em;
+	}
+
+	.slick-prev:before,
+	.slick-next:before {
+		color: $white;
+	}
+}
+
+
+/*******************************
+	hero style 3
+********************************/
+.hero-slider-style-3 {
+	height: 100vh;
+
+	@include widther(1200px) {
+		height: calc(100vh - 100px);
+	}
+
+	@include media-query(991px) {
+		height: 500px;
+	}
+
+	@include media-query(767px) {
+		height: 420px;
+	}
+
+	.slide {
+		position: relative;
+		height: 100vh;
+
+		@include widther(1200px) {
+			height: calc(100vh - 100px);
+		}
+
+		@include media-query(991px) {
+			height: 500px;
+		}
+
+		@include media-query(767px) {
+			height: 420px;
+		}
+
+		&:before {
+			content: "";
+			@include overlay(transparentize($theme-primary-color, 0.3));
+		}
+	}
+
+	.slide-caption {
+		text-align: center;
+		@include widther(992px) {
+			margin-top: 140px;
+		}
+	}
+
+	.slide-caption > h2 {
+		color: $white;
+	}
+
+	.slide-caption > p {
+		color: $white;
+		@include widther(992px) {
+			padding: 0 45px;
+		}
+	}
+	/** slider controls **/
+	.slick-prev,
+	.slick-next {
+		background-color: transparent;
+		width:45px;
+		height: 45px;
+		z-index: 10;
+
+		@include media-query(991px) {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	.slick-prev,
+	.slick-next {
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+		border: 1px solid #c6d2d8;
+		border-radius: 50%;
+
+		&:before {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+			color: #c6d2d8;
+			line-height: 55px;
+		}
+	}
+}

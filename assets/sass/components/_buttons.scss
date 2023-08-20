@@ -1,0 +1,27 @@
+.theme-btn {
+	font-family: $heading-font;
+	background: $theme-primary-color;
+	@include linear-gradient-bg(top, $theme-primary-color, darken($theme-primary-color, 5%));
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 500;
+	color: $white;
+	padding: 11px 30px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 11px 25px;
+	}
+
+	@include media-query(767px) {
+		padding: 9px 22px;
+	}
+
+	&:hover {
+		background-color: darken($theme-primary-color, 5%);
+		@include linear-gradient-bg(top, darken($theme-primary-color, 5%), $theme-primary-color);
+		color: $white;
+	}
+}

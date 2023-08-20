@@ -1,0 +1,100 @@
+/*--------------------------------------------------------------
+	#Blog classic
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+#12.0 blog-calassic-main-content
+--------------------------------------------------------------*/
+.blog-calassic-main-content {
+
+	.blog-grids > .grid + .grid {
+		margin-top: 75px;
+
+		@include media-query(991px) {
+			margin-top: 55px;
+		}
+	}
+
+	.grid .entry-body {
+		padding: 0;
+		border: 0;
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+
+		@include media-query(767px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.entry-meta {
+		list-style: none;
+		overflow: hidden;
+		border: 0;
+		padding: 0;
+
+		li {
+			float: left;
+		}
+
+		> li + li {
+			margin-left: 25px;
+
+			@include media-query(767px) {
+                margin-left: 15px;
+            }
+		}
+
+		li a {
+			color: #999999;
+		}
+	}
+
+	.entry-title-meta {
+		padding-right: 250px;
+		margin-bottom: 25px;
+
+		@include media-query(1199px) {
+			padding-right: 150px;
+		}
+
+		@include media-query(991px) {
+			padding-right: 0;
+		}
+	}
+
+	.entry-title-meta h3 {
+		font-size: 22px;
+		font-size: calc-rem-value(22);
+		font-weight: 600;
+		line-height: 1.4em;
+		margin: 0 0 0.45em;
+
+		@include media-query(991px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+
+		a {
+			color: $theme-primary-color;
+		}
+	}
+
+	.entry-media {
+		margin-bottom: 30px;
+	}
+
+	.entry-body p {
+		color: #86909e;
+		margin-bottom: 1.2em;
+	}
+
+	.entry-body .read-more {
+		color: $theme-primary-color;
+		font-weight: 500;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}

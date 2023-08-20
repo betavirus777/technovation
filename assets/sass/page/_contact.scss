@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------
+#	contact page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#10.1	contact-pg-contact-section
+--------------------------------------------------------------*/
+.contact-pg-contact-section {
+	
+	.contact-info {
+
+		@include media-query(991px) {
+			margin-bottom: 50px;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		ul li {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			font-weight: 500;
+			color: #86909e;
+			line-height: 1.8em;
+			padding-left: 30px;
+			position: relative;
+
+			@include media-query(991px) {
+				font-size: 15px;
+				font-size: calc-rem-value(15);
+			}
+		}
+
+		li i {
+			position: absolute;
+			left: 0;
+		}
+
+		ul > li + li {
+			margin-top: 20px;
+		}
+	}
+
+	.contact-form {
+		@include widther(1200px) {
+			padding-left: 70px;
+		}
+	}
+
+
+    form input,
+    form textarea {
+        background-color: #f8f8fa;
+        height: 40px;
+        border: 1px solid #e6e9ec;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    form textarea {
+        height: 195px;
+
+        @include media-query(767px) {
+            height: 120px;
+        }
+    }
+
+    form > div {
+        margin-bottom: 20px;
+    }
+
+    .submit-btn {
+        text-align: center;
+        margin: 25px 0 0;
+
+        @include media-query(991px) {
+            margin: 15px 0 0;
+        }
+
+        button {
+        	font-family: $heading-font;
+            background: $theme-primary-color;
+            @include linear-gradient-bg(top, $theme-primary-color, darken($theme-primary-color, 5%));
+            width: 100%;
+            padding: 10px 30px; 
+            color: $white;
+            border: 0;
+            outline: 0;
+
+            @include media-query(767px) {
+                padding: 10px 20px; 
+            }
+        }
+
+        button:hover {
+            background: darken($theme-primary-color, 5%);
+            @include linear-gradient-bg(top, darken($theme-primary-color, 5%), $theme-primary-color);
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+#10.2	contact-map-section
+--------------------------------------------------------------*/
+.contact-map-section {
+	.location-map {
+		width: 100%;
+		height: 450px;
+
+		@include media-query(767px) {
+			height: 300px;
+		}
+	}
+}

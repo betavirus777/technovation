@@ -1,0 +1,107 @@
+/*************************
+	services grids
+*****************************/
+.services-grids {
+	.grid {
+		background-color: $white;
+		text-align: center;
+		padding: 45px;
+		margin-bottom: 55px;
+		border: 1px solid #f1f1f1;
+		box-shadow: 0px 22px 40px 0px transparentize(#ababab, 0.9);
+		position: relative;
+		overflow: hidden;
+
+		@include media-query(767px) {
+			padding: 35px 25px;
+		}
+	}
+
+	.grid .inner {
+		position: relative;
+	}
+
+	.grid .overlay {
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		position: absolute;
+		left: 6px;
+		top: 6px;
+		opacity: 0;
+		@include transition-time(0.3s);
+
+		&:before {
+			content: "";
+			@include overlay(transparentize($theme-primary-color, 0.1));
+		}
+	}
+
+	.grid .fi:before {
+		font-size: 45px;
+		font-size: calc-rem-value(45);
+		color: $theme-primary-color;
+
+		@include media-query(991px) {
+			font-size: 38px;
+			font-size: calc-rem-value(38);
+		}
+	}
+
+	.grid h3 {
+		font-size: 24px;
+		font-size: calc-rem-value(24);
+		color: $theme-primary-color;
+		font-weight: 500;
+		margin: 5px 0 0.5em;
+
+		@include media-query(991px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+
+		@include media-query(767px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+	}
+
+	.grid p {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		margin: 0 0 4.5em;
+
+		@include media-query(991px) {
+			margin: 0 0 3em;
+		}
+
+		@include media-query(767px) {
+			margin: 0 0 2em;
+		}
+	}
+
+	.grid .more {
+		font-family: $heading-font;
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		color: $theme-primary-color;
+		font-weight: 600;
+
+		@include media-query(991px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.grid:hover {
+		.overlay {
+			opacity: 1;
+		}
+
+		h3,
+		.fi:before,
+		p,
+		.more {
+			color: $white;
+		}
+	}
+}
