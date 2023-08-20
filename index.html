@@ -325,7 +325,7 @@
                     <div class="contact-form">
                         <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
                             <input type="hidden" name="oid" value="00D5j00000CMZL9">
-                            <input type="hidden" name="retURL" value="file:///Users/betavirus/Documents/Technovation/index.html?form_submitted=success">
+                            <input type="hidden" name="retURL" value="https://www.technovationhub.in?form_submitted=success">
                             <div class="left-col">
                                 <div>
                                     <label for="last_name">Full Name</label>
@@ -503,6 +503,7 @@ function scrollToElement(id, startTime) {
         const paramValue = getQueryParam(paramName);
 
         if (paramValue === 'success') {
+            scrollToSection('#register')
             showToast();
         }
 
