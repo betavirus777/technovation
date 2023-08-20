@@ -8979,10 +8979,25 @@ img {
   max-height: 100%;
 }
 
+#slide-mobile-hide {
+  display: block;
+}
+
 @media (max-width: 768px) {
   #slide-mobile-hide {
       display: none;
   }
 }
+
+#slide-mobile-show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #slide-mobile-show {
+      display: block;
+  }
+}
+
 
 /*# sourceMappingURL=style.css.map */
