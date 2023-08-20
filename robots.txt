@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/          # Disallow crawling of admin pages
+Disallow: /private/        # Disallow private content
+Disallow: /confidential/   # Disallow confidential content
+Disallow: /login/          # Disallow login pages
+
+# Allow search engines to crawl and index everything else
+Allow: /
