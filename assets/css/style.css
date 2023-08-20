@@ -8964,6 +8964,11 @@ img {
   }
 }
 
+.submit-btn button{
+  background-color: #011954; 
+  color: white;
+}
+
 .blog-single-section .comment-respond .submit-btn button:hover {
   background-color: #00123e;
   background: -webkit-linear-gradient(top, #00123e, #001a57);
