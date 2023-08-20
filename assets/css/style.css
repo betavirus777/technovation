@@ -8979,4 +8979,10 @@ img {
   max-height: 100%;
 }
 
+@media (max-width: 768px) {
+  #slide-mobile-hide {
+      display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
